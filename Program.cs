@@ -10,17 +10,19 @@ namespace Контроль_выхода
     {
         static void Main(string[] args)
         {
-         string input = "текст";
-         string exit = "exit";
+            string input = "текст";
+            string commandExit = "exit";
+            bool isContinue = true;
 
-            while(input != exit)
+            while(isContinue == true)
             {
-             Console.WriteLine("Введите exit, чтобы выйти.");
-             input = Console.ReadLine();
+                Console.WriteLine("Введите " + commandExit + ", чтобы выйти.");
+                input = Console.ReadLine();
 
-                if(input == exit)
+                if(input == commandExit)
                 {
-                Console.WriteLine("Вы вышли из цикла.");
+                    isContinue = false;
+                    Console.WriteLine("Вы вышли из цикла.");
                 }
             }
         }
